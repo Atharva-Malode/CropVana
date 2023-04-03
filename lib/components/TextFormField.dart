@@ -30,7 +30,7 @@ class LogintextField extends StatelessWidget {
         ),
         labelText: LabelText,
         labelStyle: const TextStyle(
-            color: Color.fromARGB(150, 23, 23, 23),
+            color: Colors.white,
             fontWeight: FontWeight.bold),
       ),
     );
