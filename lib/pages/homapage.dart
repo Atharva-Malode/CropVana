@@ -70,13 +70,13 @@ class HomePage extends StatelessWidget {
                   description: 'Increased by: 7%',
                 ),
                 CourseItem(
-                  image: "assets/images/ngo-2.png",
+                  image: "assets/images/rice.png",
                   title: 'Rice',
                   description: 'Increased by: 2.3%',
                 ),
                 CourseItem(
-                  image: "assets/images/ngo-3.png",
-                  title: 'Jovar',
+                  image: "assets/images/jowar.png",
+                  title: 'Jowar',
                   description: 'Decreased by: 0.8%',
                 ),
               ],

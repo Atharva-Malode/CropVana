@@ -1,36 +1,54 @@
-// ignore_for_file: sort_child_properties_last
-
-import 'package:cropvana/components/loginPageText.dart';
 import 'package:cropvana/pages/signinpage.dart';
 import 'package:cropvana/pages/signuppage.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        width: double.infinity,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Colors.green.shade400, Colors.green.shade700],
+          ),
+        ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(
-              height: 50,
+            const SizedBox(height: 60),
+            Image.asset(
+              'assets/images/logo.png',
+              width: 200,
+              height: 200,
             ),
-            Center(
-              child: Image.asset(
-                "assets/images/Logo.png",
-                height: 200,
+            const SizedBox(height: 16),
+            const Text(
+              'Welcome\nto CropVana',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            const HeadingText(),
-            const SizedBox(
-              height: 50,
+            const SizedBox(height: 8),
+            const Text(
+              'Sign In to continue',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            Center(
+            const SizedBox(height: 40),
+            SizedBox(
+              height: 50,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -38,68 +56,77 @@ class LoginPage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const SigninPage()),
                   );
                 },
-                child: const Text(
-                  "Login",
-                  style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                  foregroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                  ),
                 ),
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                  backgroundColor: Colors.black,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 160, vertical: 20),
+                child: const Text(
+                  'Login with email',
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
                 ),
               ),
             ),
-            const SizedBox(height: 15),
-            const Center(
-                child: Text("Or",
-                    style:
-                        TextStyle(fontSize: 15, fontWeight: FontWeight.bold))),
-            const SizedBox(height: 15),
-            Center(
+            const SizedBox(height: 8),
+            const Text(
+              'or',
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 8),
+            SizedBox(
+              height: 50,
               child: ElevatedButton(
                 onPressed: () {},
-                child: const Text(
-                  "Login with google",
-                  style: TextStyle(
-                      fontSize: 18,
-                      color: Color(0xff477DBA),
-                      fontWeight: FontWeight.w500),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                  foregroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                  ),
                 ),
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                  backgroundColor: const Color(0xffD8E9FF),
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 110, vertical: 20),
+                child: const Text(
+                  'Login with Google',
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
                 ),
               ),
             ),
-            const SizedBox(height: 150),
-            const Center(child: Text("Not Registered Yet?")),
+            const SizedBox(height: 15),
+            const Center(child: Text("Not Registered Yet?", style: TextStyle(color: Colors.white,),)),
             const SizedBox(height: 10),
-            Center(
-              child: ElevatedButton(
+            SizedBox(
+              height: 50,
+              child: TextButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const SignUpPage()),
                   );
                 },
-                child: const Text(
-                  "Create an Account",
-                  style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500),
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.white, backgroundColor: Colors.transparent,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.zero),
+                  ),
                 ),
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                  backgroundColor: Colors.black,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 110, vertical: 20),
+                child: const Text(
+                  'Create an Account',
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
                 ),
               ),
             ),
