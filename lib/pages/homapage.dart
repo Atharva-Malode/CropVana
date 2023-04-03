@@ -3,6 +3,8 @@ import 'package:cropvana/components/appdrawer.dart';
 import 'package:cropvana/components/homecarousle.dart';
 import 'package:flutter/material.dart';
 
+import '../components/roundedbutton.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -40,7 +42,7 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CarouselWithDotsPage(imgList: const [
-              'assets/images/1.png',
+              'assets/images/news-1.jpg',
               'assets/images/2.png',
               'assets/images/3.png',
             ]),
@@ -50,7 +52,7 @@ class HomePage extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.only(left: 20.0, bottom: 10),
               child: Text(
-                "Recommanded NGO's",
+                "Crops Market Demand",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -79,39 +81,18 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
-            const Padding(
-              padding: EdgeInsets.only(left: 20.0, bottom: 10),
-              child: Text(
-                "Recommanded NGO's",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-              ),
-            ),
             const SizedBox(
               height: 10,
             ),
-            Column(
-              children: const [
-                CourseItem(
-                  image: "assets/images/hotel-1.png",
-                  title: 'Radisson Blu',
-                  description: 'Located at nagpur',
-                ),
-                CourseItem(
-                  image: "assets/images/hotel-2.png",
-                  title: 'Le Meridien',
-                  description: 'Located at Nagpur',
-                ),
-                CourseItem(
-                  image: "assets/images/hotel-3.png",
-                  title: 'Pride Hotel',
-                  description: 'Located at nagput',
-                ),
-              ],
-            ),
+            Padding(
+              padding: const EdgeInsets.only(left:20, bottom:10),
+              child: RoundedGreenButton(
+                size: 360,
+                onPressed: () {
+                },
+                buttonText: "Personalized Crops",
+              ),
+            )
           ],
         ),
       ),
