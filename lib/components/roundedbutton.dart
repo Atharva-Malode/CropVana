@@ -17,7 +17,7 @@ class RoundedGreenButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(size/2),
         border: Border.all(
           color: Colors.green,
-          width: 4,
+          width: 2,
         ),
       ),
       child: Stack(

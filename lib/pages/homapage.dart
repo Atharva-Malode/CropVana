@@ -65,19 +65,19 @@ class HomePage extends StatelessWidget {
             Column(
               children: const [
                 CourseItem(
-                  image: "assets/images/ngo-1.jpg",
-                  title: 'Upay',
-                  description: 'Located at nagpur',
+                  image: "assets/images/wheat.png",
+                  title: 'Wheat',
+                  description: 'Increased by: 7%',
                 ),
                 CourseItem(
                   image: "assets/images/ngo-2.png",
-                  title: 'Uddhar Foundation',
-                  description: 'Located at Nagpur',
+                  title: 'Rice',
+                  description: 'Increased by: 2.3%',
                 ),
                 CourseItem(
                   image: "assets/images/ngo-3.png",
-                  title: 'Vidharbha Ratna',
-                  description: 'Located at nagput',
+                  title: 'Jovar',
+                  description: 'Decreased by: 0.8%',
                 ),
               ],
             ),
@@ -85,7 +85,7 @@ class HomePage extends StatelessWidget {
               height: 10,
             ),
             Padding(
-              padding: const EdgeInsets.only(left:20, bottom:10),
+              padding: const EdgeInsets.only(left:20, bottom:10, right: 20),
               child: RoundedGreenButton(
                 size: 360,
                 onPressed: () {

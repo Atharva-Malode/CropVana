@@ -31,7 +31,8 @@ class CourseItem extends StatelessWidget {
               height: 60,
               width: 60,
               decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 0, 128, 4),
+                //color: Color.fromARGB(255, 0, 128, 4),
+                color: Colors.white,
                 borderRadius: BorderRadius.all(
                   Radius.circular(10),
                 ),
