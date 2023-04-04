@@ -8,7 +8,9 @@ class RecommendPage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        centerTitle: true,
+        title: Text('Crop Recommendation'),
+        backgroundColor: Colors.green,
         elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.black),
@@ -33,17 +35,10 @@ class RecommendPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Recommended Crops',
+                      'Recommended',
                       style: TextStyle(
-                        fontSize: 24,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text(
-                      'According to weather',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.grey,
                       ),
                     ),
                   ],
@@ -56,10 +51,16 @@ class RecommendPage extends StatelessWidget {
                     height: 100,
                     margin: EdgeInsets.only(right: 16),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: Colors.green,
+                        width: 2,
+                      ),
+                      // borderRadius: BorderRadius.circular(8),
                       image: DecorationImage(
                         image:
-                            NetworkImage('https://placeimg.com/640/480/nature'),
+                            // NetworkImage('https://placeimg.com/640/480/nature'),
+                            Image.asset('assets/images/jowar.png').image,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -69,14 +70,14 @@ class RecommendPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Crop Name',
+                          'Jowar',
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
-                          'Description of the crop',
+                          'Suitable for dry weather and in market demand in summer',
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.grey,
