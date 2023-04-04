@@ -68,23 +68,23 @@ class _MainNavigationState extends State<MainNavigation> {
             tabs: [
               const GButton(
                 icon: Icons.home,
-                text: 'Home',
+                //text: 'Home',
               ),
               const GButton(
                 icon: Icons.health_and_safety,
-                text: 'Aid',
+                //text: 'Aid',
               ),
               const GButton(
                 icon: Icons.cloud_outlined,
-                text:'Weather',
+                //text:'Weather',
               ),
               const GButton(
                 icon: Icons.thermostat_sharp,
-                text: 'Soil Testing'
+                //text: 'Soil Testing'
               ),
               const GButton(
                 icon: Icons.person,
-                text: 'Profile'
+                //text: 'Profile'
               ),
             ],
           ),
