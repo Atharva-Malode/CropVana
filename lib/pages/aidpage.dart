@@ -10,69 +10,162 @@ class AidPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: SafeArea(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Container(
-                  height: 46,
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade200,
-                      borderRadius: BorderRadius.circular(8)),
-                  child: TextField(
-                    cursorColor: Colors.black,
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(
-                          Icons.search,
-                          color: Colors.grey.shade700,
-                        ),
-                        border: InputBorder.none,
-                        hintText: "Search College Wise Notes",
-                        hintStyle: TextStyle(color: Colors.grey.shade500)),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal:16.0, vertical: 24.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              // ignore: prefer_const_literals_to_create_immutables
+              children: [
+                const Text(
+                  'Discover',
+                  style: TextStyle(
+                    fontSize: 32.0,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
+                const Text(
+                  'News for farmer',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.w500
+                  ),
+                ),
+                const SizedBox(height: 16.0,),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Search",
+                    prefixIcon: const Icon(Icons.search),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.0))
+                  ),
+                ),
+                const SizedBox(height: 20.0),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      _buildCategoryButton('All', true),
+                      _buildCategoryButton('Govt. Policies', false),
+                      _buildCategoryButton('Fertilizers', false),
+                      _buildCategoryButton('Market', false),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 20.0,),
+                SingleChildScrollView(
+                  child: Column(
+                  children: [
+                    _buildNewsCard(
+                    'https://picsum.photos/200',
+                    'Lorem ipsum dolor sit amet',
+                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                    ),
+                    _buildNewsCard(
+                    'https://picsum.photos/200',
+                    'Lorem ipsum dolor sit amet',
+                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                    ),
+                    _buildNewsCard(
+                    'https://picsum.photos/200',
+                    'Lorem ipsum dolor sit amet',
+                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                    ),
+                    _buildNewsCard(
+                    'https://picsum.photos/200',
+                    'Lorem ipsum dolor sit amet',
+                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                    ),
+                    _buildNewsCard(
+                    'https://picsum.photos/200',
+                    'Lorem ipsum dolor sit amet',
+                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                    ),
+                    _buildNewsCard(
+                    'https://picsum.photos/200',
+                    'Lorem ipsum dolor sit amet',
+                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                    ),
+                    _buildNewsCard(
+                    'https://picsum.photos/200',
+                    'Lorem ipsum dolor sit amet',
+                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                    ),
+                  ],
+                  ),
+                ),
+              ],  
+            ),
+          ),
+        ),
+    ),
+    );
+  }
+  Widget _buildNewsCard(String imageUrl, String title, String description) {
+  return Container(
+    padding: const EdgeInsets.all(16.0),
+    margin: const EdgeInsets.only(bottom: 16.0),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(10.0),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.2),
+          offset: const Offset(0.0, 3.0),
+          blurRadius: 6.0,
+        ),
+      ],
+    ),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(8.0),
+          child: Image.network(
+            imageUrl,
+            width: 100.0,
+            height: 100.0,
+            fit: BoxFit.cover,
+          ),
+        ),
+        const SizedBox(width: 16.0),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: const TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              Column(
-                children: const [
-                  CourseItem(
-                    image: "assets/images/ngo-1.jpg",
-                    title: 'Upay',
-                    description: 'Located at nagpur',
-                  ),
-                  CourseItem(
-                    image: "assets/images/ngo-2.png",
-                    title: 'Uddhar Foundation',
-                    description: 'Located at Nagpur',
-                  ),
-                  CourseItem(
-                    image: "assets/images/ngo-3.png",
-                    title: 'Vidharbha Ratna',
-                    description: 'Located at nagput',
-                  ),
-                  CourseItem(
-                    image: "assets/images/hotel-1.png",
-                    title: 'Radisson Blu',
-                    description: 'Located at nagpur',
-                  ),
-                  CourseItem(
-                    image: "assets/images/hotel-2.png",
-                    title: 'Le Meridien',
-                    description: 'Located at Nagpur',
-                  ),
-                  CourseItem(
-                    image: "assets/images/hotel-3.png",
-                    title: 'Pride Hotel',
-                    description: 'Located at nagput',
-                  ),
-                ],
+              const SizedBox(height: 8.0),
+              Text(
+                description,
+                style: TextStyle(
+                  fontSize: 14.0,
+                  color: Colors.grey[600],
+                ),
               ),
             ],
           ),
         ),
+      ],
+    ),
+  );
+}
+Widget _buildCategoryButton(String label, bool isActive) {
+  return Container(
+    margin: const EdgeInsets.only(right: 16.0),
+    child: ElevatedButton(
+      onPressed: () {},
+      style: ButtonStyle(
+        backgroundColor: isActive ? MaterialStateProperty.all<Color>(Colors.blue) : MaterialStateProperty.all<Color>(Colors.grey.shade300),
+        foregroundColor: isActive ? MaterialStateProperty.all<Color>(Colors.white) : MaterialStateProperty.all<Color>(Colors.black),
+        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)),
       ),
-    );
-  }
+      child: Text(label),
+    ),
+  );
+}
+
 }

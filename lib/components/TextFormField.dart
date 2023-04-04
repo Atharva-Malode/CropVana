@@ -33,6 +33,9 @@ class LogintextField extends StatelessWidget {
             color: Colors.white,
             fontWeight: FontWeight.bold),
       ),
+      style: const TextStyle(
+        color: Colors.white,
+      ),
     );
   }
 }

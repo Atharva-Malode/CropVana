@@ -57,7 +57,7 @@ class LoginPage extends StatelessWidget {
                   );
                 },
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
                   foregroundColor: MaterialStateProperty.all<Color>(Colors.green),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(

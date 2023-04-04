@@ -74,7 +74,7 @@ class _MainNavigationState extends State<MainNavigation> {
               //text: 'Home',
             ),
             const GButton(
-              icon: Icons.eco,
+              icon: Icons.newspaper_sharp,
               //text: 'Aid',
             ),
             const GButton(
