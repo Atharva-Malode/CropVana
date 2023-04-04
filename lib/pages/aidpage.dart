@@ -55,39 +55,19 @@ class AidPage extends StatelessWidget {
                   child: Column(
                   children: [
                     _buildNewsCard(
-                    'https://picsum.photos/200',
-                    'Lorem ipsum dolor sit amet',
-                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                      'https://cfstatic.give.do/00ae3035-de8b-44ed-8102-ce1d20a66c22.jpg',
+                      'Universal Versatile Society (UVS)',
+                      'Through our project, we are intending to make 250 families self-sustained',
                     ),
                     _buildNewsCard(
-                    'https://picsum.photos/200',
-                    'Lorem ipsum dolor sit amet',
-                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                      'https://cfstatic.give.do/e40cb30b-956f-423a-a1b2-dc9db25e9347.jpg',
+                      'Dilasa Sanstha',
+                      'The NGO is sponsoring farmers to learn low-cost farming methods.',
                     ),
                     _buildNewsCard(
-                    'https://picsum.photos/200',
-                    'Lorem ipsum dolor sit amet',
-                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-                    ),
-                    _buildNewsCard(
-                    'https://picsum.photos/200',
-                    'Lorem ipsum dolor sit amet',
-                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-                    ),
-                    _buildNewsCard(
-                    'https://picsum.photos/200',
-                    'Lorem ipsum dolor sit amet',
-                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-                    ),
-                    _buildNewsCard(
-                    'https://picsum.photos/200',
-                    'Lorem ipsum dolor sit amet',
-                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-                    ),
-                    _buildNewsCard(
-                    'https://picsum.photos/200',
-                    'Lorem ipsum dolor sit amet',
-                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                      'https://cfstatic.give.do/efbfa5a3-78d9-43f2-8e58-86edc14f204e.jpg',
+                      'Marathwada Navnirman Lokayat (MANAVLOK)',
+                      'The organization has developed multi yearly cropping pattern which is helpful for facing drought situation & for increasing income.',
                     ),
                   ],
                   ),
@@ -159,6 +139,11 @@ Widget _buildCategoryButton(String label, bool isActive) {
     child: ElevatedButton(
       onPressed: () {},
       style: ButtonStyle(
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16.0)
+          ),
+        ),
         backgroundColor: isActive ? MaterialStateProperty.all<Color>(Colors.blue) : MaterialStateProperty.all<Color>(Colors.grey.shade300),
         foregroundColor: isActive ? MaterialStateProperty.all<Color>(Colors.white) : MaterialStateProperty.all<Color>(Colors.black),
         padding: MaterialStateProperty.all<EdgeInsetsGeometry>(const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)),
