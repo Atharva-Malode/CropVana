@@ -49,46 +49,41 @@ class _MainNavigationState extends State<MainNavigation> {
             BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
           ]),*/
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
-            decoration: const BoxDecoration(
-            color: Colors.white,
-          ),
-          child: GNav(
-            onTabChange: (position) {
-              setState(() {
-                selectedPage = position;
-              });
-            },
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            activeColor: Colors.white,
-            color: Colors.black,
-            tabBackgroundColor: Colors.green,
-            gap: 5,
-            // ignore: prefer_const_literals_to_create_immutables
-            tabs: [
-              const GButton(
-                icon: Icons.home,
-                //text: 'Home',
-              ),
-              const GButton(
-                icon: Icons.health_and_safety,
-                //text: 'Aid',
-              ),
-              const GButton(
-                icon: Icons.cloud_outlined,
-                //text:'Weather',
-              ),
-              const GButton(
-                icon: Icons.thermostat_sharp,
-                //text: 'Soil Testing'
-              ),
-              const GButton(
-                icon: Icons.person,
-                //text: 'Profile'
-              ),
-            ],
-          ),
+        margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+        decoration: const BoxDecoration(
+          color: Colors.white,
         ),
+        child: GNav(
+          onTabChange: (position) {
+            setState(() {
+              selectedPage = position;
+            });
+          },
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          activeColor: Colors.white,
+          //backgroundColor: Colors.green,
+          color: Colors.black,
+          tabBackgroundColor: Colors.green.shade300,
+          gap: 5,
+          // ignore: prefer_const_literals_to_create_immutables
+          tabs: [
+            const GButton(
+              icon: Icons.home,
+              text: 'Home',
+            ),
+            const GButton(
+              icon: Icons.newspaper_sharp,
+              text: 'Aid',
+            ),
+            const GButton(
+              icon: Icons.cloud_outlined,
+              text: 'Weather',
+            ),
+            const GButton(icon: Icons.thermostat_sharp, text: 'Soil Testing'),
+            const GButton(icon: Icons.person, text: 'Profile'),
+          ],
+        ),
+      ),
     );
   }
 }
