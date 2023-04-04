@@ -2,6 +2,7 @@
 
 import 'package:cropvana/pages/bottomnav.dart';
 import 'package:cropvana/pages/loginpage.dart';
+import 'package:cropvana/pages/recommendpage.dart';
 import 'package:cropvana/pages/signinpage.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      home:  RecommendPage(),
     );
   }
 }

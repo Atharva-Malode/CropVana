@@ -98,7 +98,9 @@ class HomePage extends StatelessWidget {
         icon: const Icon(Icons.camera_enhance),
         label: const Text('Find Best Crop For Me'),
         backgroundColor: Color.fromRGBO(76, 175, 80, 1),
-        onPressed: () {},
+        onPressed: () {
+          
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
     );
