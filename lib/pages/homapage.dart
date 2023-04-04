@@ -1,6 +1,7 @@
 import 'package:cropvana/components/CoursesItems.dart';
 import 'package:cropvana/components/appdrawer.dart';
 import 'package:cropvana/components/homecarousle.dart';
+import 'package:cropvana/pages/recommendpage.dart';
 import 'package:flutter/material.dart';
 
 import '../components/roundedbutton.dart';
@@ -97,9 +98,14 @@ class HomePage extends StatelessWidget {
         //child: new Icon(Icons.camera_enhance),
         icon: const Icon(Icons.camera_enhance),
         label: const Text('Find Best Crop For Me'),
-        backgroundColor: Color.fromRGBO(76, 175, 80, 1),
+        backgroundColor: const Color.fromRGBO(76, 175, 80, 1),
         onPressed: () {
-          
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const RecommendPage(),
+            ),
+          );
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
