@@ -79,23 +79,28 @@ class HomePage extends StatelessWidget {
                   title: 'Jowar',
                   description: 'Decreased by: 0.8%',
                 ),
+                CourseItem(
+                  image: "assets/images/jowar.png",
+                  title: 'Jowar',
+                  description: 'Decreased by: 0.8%',
+                ),
               ],
             ),
             const SizedBox(
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left:20, bottom:10, right: 20),
-              child: RoundedGreenButton(
-                size: 360,
-                onPressed: () {
-                },
-                buttonText: "Personalized Crops",
-              ),
-            )
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        elevation: 4.0,
+        //child: new Icon(Icons.camera_enhance),
+        icon: const Icon(Icons.camera_enhance),
+        label: const Text('Find Best Crop For Me'),
+        backgroundColor: Color.fromRGBO(76, 175, 80, 1),
+        onPressed: () {},
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
     );
   }
 }
