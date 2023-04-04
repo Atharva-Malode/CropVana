@@ -69,6 +69,16 @@ class AidPage extends StatelessWidget {
                       'Marathwada Navnirman Lokayat (MANAVLOK)',
                       'The organization has developed multi yearly cropping pattern which is helpful for facing drought situation & for increasing income.',
                     ),
+                    _buildNewsCard(
+                      'https://www.bookeventz.com/blog/wp-content/uploads/2021/02/Robin-Hood-Army.png', 
+                      'Robin Hood Army', 
+                      'The Robin Hood Army is a volunteer based, zero-funds organization that works to get surplus food from restaurants and the community to serve less fortunate people.',
+                    ),
+                    _buildNewsCard(
+                      'https://www.annakshetra.org/static/Annakshetra.png', 
+                      'Annakshetra',
+                      'The mission of NGO is to reduce food wastage.',
+                    ),
                   ],
                   ),
                 ),

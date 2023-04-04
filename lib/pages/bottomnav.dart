@@ -61,9 +61,8 @@ class _MainNavigationState extends State<MainNavigation> {
             },
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             activeColor: Colors.white,
-            //backgroundColor: Colors.green,
             color: Colors.black,
-            tabBackgroundColor: Colors.green.shade300,
+            tabBackgroundColor: Colors.green,
             gap: 5,
             // ignore: prefer_const_literals_to_create_immutables
             tabs: [
@@ -72,7 +71,7 @@ class _MainNavigationState extends State<MainNavigation> {
                 text: 'Home',
               ),
               const GButton(
-                icon: Icons.newspaper_sharp,
+                icon: Icons.health_and_safety,
                 text: 'Aid',
               ),
               const GButton(
