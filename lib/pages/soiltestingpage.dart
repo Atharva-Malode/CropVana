@@ -9,29 +9,29 @@ class SoilTesting extends StatelessWidget {
   SoilTesting({super.key});
 
   List<String> soilTypes = [
-    'Alluvial',
-    'Black',
-    'Red',
-    'Laterite',
-    'Mountain',
-    'Desert',
-    'Mountain',
-    'Desert',
-    'Mountain',
+    'Alluvial Soil',
+    'Black Soil',
+    'Red soil',
+    'Laterite soil',
+    'peat soil',
+    'clay soil',
+    'Loamy Soil',
+    'Sandy Soil',
+    'new soil',
     'Desert',
   ];
 
   List<String> soildescription = [
-    'Alluvial soil is a soil type that is formed by the deposition of silt, sand, and gravel from rivers and streams. It is the most fertile soil type and is found in river deltas and floodplains.',
-    'Black soil is a soil type that is formed from the weathering of basalt and gneiss. It is found in the Deccan Plateau and is the most fertile soil type in India.',
-    'Red soil is a soil type that is formed from the weathering of granite and gneiss. It is found in the Deccan Plateau and is the second most fertile soil type in India.',
-    'Laterite soil is a soil type that is formed from the weathering of basalt and gneiss. It is found in the Deccan Plateau and is the most fertile soil type in India.',
-    'Mountain soil is a soil type that is formed from the weathering of basalt and gneiss. It is found in the Deccan Plateau and is the most fertile soil type in India.',
-    'Desert soil is a soil type that is formed from the weathering of basalt and gneiss. It is found in the Deccan Plateau and is the most fertile soil type in India.',
-    'Mountain soil is a soil type that is formed from the weathering of basalt and gneiss. It is found in the Deccan Plateau and is the most fertile soil type in India.',
-    'Desert soil is a soil type that is formed from the weathering of basalt and gneiss. It is found in the Deccan Plateau and is the most fertile soil type in India.',
-    'Mountain soil is a soil type that is formed from the weathering of basalt and gneiss. It is found in the Deccan Plateau and is the most fertile soil type in India.',
-    'Desert soil is a soil type that is formed from the weathering of basalt and gneiss. It is found in the Deccan Plateau and is the most fertile soil type in India.',
+    'Rice, wheat, sugarcane, cotton, jute, potato',
+    'Cotton, soybean, sugarcane, groundnut, wheat, jowar, bajra, ragi, moong, urad, chana',
+    'Tea, coffee, cotton, sugarcane, jowar, bajra, tobacco, tomato, okra, brinjal',
+    'Cashew, rubber, coconut, cassava, sweet potato, pineapple, jackfruit',
+    'Potatoes, lettuce, spinach, blueberries, cranberries, rhododendrons',
+    'Beans, peas, leafy greens, corn, wheat, oats, and barley.',
+    'tomatoes, peppers, squash, apples, grapes, strawberries, wheat, corn, soybeans',
+    'carrots, radishes, sweet potatoes, peanuts, asparagus, watermelons',
+    'Cabbage, cauliflower, broccoli, lettuce, spinach, kale, collards, turnips',
+    'Cactus, cacti, agave, aloe, al',
   ];
 
   @override
@@ -52,37 +52,28 @@ class SoilTesting extends StatelessWidget {
           itemCount: soilTypes.length,
           itemBuilder: (context, index) {
             return ListTile(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
               leading: CircleAvatar(
                 child: Text(soilTypes[index][0]),
               ),
               title: Text(soilTypes[index]),
               subtitle: Text(soildescription[index]),
+              contentPadding: EdgeInsets.all(
+                20.0,
+              ),
             );
           }),
       floatingActionButton: FloatingActionButton.extended(
         elevation: 4.0,
+        //child: new Icon(Icons.camera_enhance),
         icon: const Icon(Icons.camera_enhance),
-        label: const Text('Upload Image'),
-        backgroundColor: Colors.green,
+        label: const Text('Check My Soil Type'),
+        backgroundColor: Color.fromRGBO(76, 175, 80, 1),
         onPressed: () {},
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomAppBar(
-        child: new Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            IconButton(
-              icon: Icon(null),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(null),
-              onPressed: () {},
-            )
-          ],
-        ),
-      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
